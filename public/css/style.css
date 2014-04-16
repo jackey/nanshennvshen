@@ -1,0 +1,107 @@
+body, html {
+  width: 760px;
+  margin: 0 auto;
+  background: url(../misc/bg.png) repeat-y;
+}
+
+img {
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+top: 20px;
+width: 760px;
+}
+
+.header .search input {
+  height: 50px;
+width: 100%;
+border: 1px solid #a9a9a9;
+border-radius: 5px;
+
+}
+
+.header .search {
+float: left;
+margin-left: 30px;
+width: 70%;
+}
+
+.header .btn {
+  float: left;
+  margin-left:20px;
+}
+
+.header .btn button {
+  width: 150px;
+  height: 54px;
+}
+
+.body {
+width: 92%;
+margin: 110px auto 100px auto;
+border: 1px solid #686e6e;
+background: #e7e7e7;
+border-radius: 12px;
+}
+
+.body .wrapper {
+  margin: 30px;
+}
+
+.footer {
+position: fixed;
+bottom: 0px;
+width: 760px;
+height: 70px;
+}
+
+.footer .menu {
+  height: 70px;
+line-height: 70px;
+font-size: 16px;
+}
+
+.footer .menu .item {
+  float: left;
+  width: 20%;
+  text-align: center;
+  position: relative;
+  background: #ff6b00;
+}
+
+.footer .menu .item a:hover{
+  color: #fff;
+}
+
+.footer .menu .item a:active, .footer .menu .item a {
+  color: #e7e7e7;
+  text-decoration: none;
+}
+
+.footer .menu .item.last .sepetor {
+  width: 0px;
+}
+
+.footer .menu .item .sepetor {
+  width: 3px;
+  height: 100%;
+  display: inline-block;
+  background: #fff;
+  position: absolute;
+  right: 0px;
+}
+
+.body .items > li.item {
+width: 292px;
+float: left;
+font-size: 14px;
+padding: 5px;
+border: 1px solid #a0a0a0;
+margin-bottom: 10px;
+}
+
+.body .items  .item-event {
+  margin-left: 30px;
+}
