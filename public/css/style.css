@@ -2,6 +2,7 @@ body, html {
   width: 760px;
   margin: 0 auto;
   background: url(../misc/bg.png) repeat-y;
+  height: 600px;
 }
 
 img {
