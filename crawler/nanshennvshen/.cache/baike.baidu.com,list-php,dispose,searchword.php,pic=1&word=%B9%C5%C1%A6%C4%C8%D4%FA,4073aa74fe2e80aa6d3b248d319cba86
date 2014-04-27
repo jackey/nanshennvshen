@@ -1,0 +1,21 @@
+status: 200
+content-length: 107
+content-location: http://baike.baidu.com/list-php/dispose/searchword.php?pic=1&word=%B9%C5%C1%A6%C4%C8%D4%FA
+set-cookie: BDUSS=3QtbjB1cHo3bHhrcmhVWVBXSHlqMX5OS2VrTklyd2xTdVNheE04UVJsSTFPSHBUQUFBQUFBJCQAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADWrUlM1q1JTZ;
+ path=/; domain=.baidu.com,
+ BDUSS=3QtbjB1cHo3bHhrcmhVWVBXSHlqMX5OS2VrTklyd2xTdVNheE04UVJsSTFPSHBUQUFBQUFBJCQAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADWrUlM1q1JTZ;
+ path=/; domain=.baidu.com, BAIDUID=A7DA6FD21B3B4D4947AEBF151C169CE0:FG=1;
+ expires=Sun, 19-Apr-15 16:58:29 GMT; max-age=31536000; path=/;
+ domain=.baidu.com; version=1
+vary: Accept-Encoding
+server: Apache
+connection: Keep-Alive
+-content-encoding: gzip
+tracecode: 35098901960289874954042000
+date: Sat, 19 Apr 2014 16:58:29 GMT
+p3p: CP=" OTI DSP COR IVA OUR IND COM "
+content-type: text/html
+-varied-accept-encoding: gzip, deflate
+
+
+<meta http-equiv='Pragma' content='no-cache'><meta http-equiv='Refresh' content='0;URL=/view/5222315.htm'>

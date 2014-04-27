@@ -1,0 +1,8 @@
+name = Shen Services
+description = Provide an API for creating shen.
+package = Shen
+core = 7.x
+php = 5.x
+
+dependencies[] = services
+dependencies[] = services_oauth

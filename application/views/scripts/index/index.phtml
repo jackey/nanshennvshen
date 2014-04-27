@@ -1,133 +1,22 @@
 <div class="bg">
-  <ul class="items clearfix">
-    <li class="item item-odd">
+  <ul class="items clearfix js-masonry" id="shen-container" data-masonry-options='{ "itemSelector": ".item" }'>
+    <?php foreach ($this->shenlist as $index => $shen):?>
+        <li class="item item-<?php echo $index %2 == 0 ? "odd": "event"?>">
       <div class="top">
-        <img src="/public/misc/people.png" alt="" />
+        <?php echo $shen["image"][0]?>
       </div>
       <div class="btm">
         <div class="t1">
-          <span class="name">马伊俐</span>
-          <span class="star">
-            喜欢 10万+ 
-          </span>
-        </div>
-        <div class="t2">
-          <p>中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员</p>
-        </div>
-      </div>
-    </li>
-    <li class="item item-event">
-      <div class="top">
-        <img src="/public/misc/people.png" alt="" />
-      </div>
-      <div class="btm">
-        <div class="t1">
-          <span class="name">马伊俐</span>
+          <span class="name"><?php echo $shen["title"]?></span>
           <span class="star">
             10万+ 喜欢
           </span>
         </div>
         <div class="t2">
-          <p>中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员</p>
+          <p><?php echo $shen["desc"]?></p>
         </div>
       </div>
     </li>
-    <li class="item item-odd">
-      <div class="top">
-        <img src="/public/misc/people.png" alt="" />
-      </div>
-      <div class="btm">
-        <div class="t1">
-          <span class="name">马伊俐</span>
-          <span class="star">
-            10万+ 喜欢
-          </span>
-        </div>
-        <div class="t2">
-          <p>中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员</p>
-        </div>
-      </div>
-    </li>
-    <li class="item item-event">
-      <div class="top">
-        <img src="/public/misc/people.png" alt="" />
-      </div>
-      <div class="btm">
-        <div class="t1">
-          <span class="name">马伊俐</span>
-          <span class="star">
-            10万+ 喜欢
-          </span>
-        </div>
-        <div class="t2">
-          <p>中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员</p>
-        </div>
-      </div>
-    </li>
-    <li class="item item-odd">
-      <div class="top">
-        <img src="/public/misc/people.png" alt="" />
-      </div>
-      <div class="btm">
-        <div class="t1">
-          <span class="name">马伊俐</span>
-          <span class="star">
-            10万+ 喜欢
-          </span>
-        </div>
-        <div class="t2">
-          <p>中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员</p>
-        </div>
-      </div>
-    </li>
-
-        <li class="item item-event">
-      <div class="top">
-        <img src="/public/misc/people.png" alt="" />
-      </div>
-      <div class="btm">
-        <div class="t1">
-          <span class="name">马伊俐</span>
-          <span class="star">
-            10万+ 喜欢
-          </span>
-        </div>
-        <div class="t2">
-          <p>中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员</p>
-        </div>
-      </div>
-    </li>
-        <li class="item item-odd">
-      <div class="top">
-        <img src="/public/misc/people.png" alt="" />
-      </div>
-      <div class="btm">
-        <div class="t1">
-          <span class="name">马伊俐</span>
-          <span class="star">
-            10万+ 喜欢
-          </span>
-        </div>
-        <div class="t2">
-          <p>中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员</p>
-        </div>
-      </div>
-    </li>
-        <li class="item item-event">
-      <div class="top">
-        <img src="/public/misc/people.png" alt="" />
-      </div>
-      <div class="btm">
-        <div class="t1">
-          <span class="name">马伊俐</span>
-          <span class="star">
-            10万+ 喜欢
-          </span>
-        </div>
-        <div class="t2">
-          <p>中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员中国著名演员</p>
-        </div>
-      </div>
-    </li>
+    <?php endforeach;?>
   </ul>
 </div>

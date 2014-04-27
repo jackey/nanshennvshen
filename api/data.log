@@ -1,0 +1,94 @@
+
+========================== NEW CALLING ====================
+Array
+(
+    [0] => admin
+    [1] => admin
+)
+
+========================== NEW CALLING ====================
+Array
+(
+    [0] => 10
+)
+
+========================== NEW CALLING ====================
+Array
+(
+    [0] => admin
+    [1] => admin
+)
+
+========================== NEW CALLING ====================
+Array
+(
+    [0] => Array
+        (
+            [offset] => 10
+        )
+
+)
+
+========================== NEW CALLING ====================
+<?xml version="1.0" encoding="UTF-8"?>
+<methodCall><methodName>system.methodSignature</methodName><params><param><value><string>user.login</string></value></param></params></methodCall>
+========================== NEW CALLING ====================
+<?xml version="1.0" encoding="UTF-8"?>
+<methodCall><methodName>user.login</methodName><params><param><value><string>admin</string></value></param><param><value><string>admin</string></value></param></params></methodCall>
+========================== NEW CALLING ====================
+Array
+(
+    [0] => admin
+    [1] => admin
+)
+
+========================== NEW CALLING ====================
+<?xml version="1.0" encoding="UTF-8"?>
+<methodCall><methodName>system.methodSignature</methodName><params><param><value><string>nvshen.index</string></value></param></params></methodCall>
+========================== NEW CALLING ====================
+<?xml version="1.0" encoding="UTF-8"?>
+<methodCall><methodName>nvshen.index</methodName><params><param><value><string>10</string></value></param></params></methodCall>
+========================== NEW CALLING ====================
+Array
+(
+    [0] => 10
+)
+
+========================== NEW CALLING ====================
+Array
+(
+    [0] => admin
+    [1] => admin
+)
+
+========================== NEW CALLING ====================
+Array
+(
+    [0] => 10
+)
+
+========================== NEW CALLING ====================
+Array
+(
+    [0] => admin
+    [1] => admin
+)
+
+========================== NEW CALLING ====================
+Array
+(
+    [0] => 10
+)
+
+========================== NEW CALLING ====================
+Array
+(
+    [0] => admin
+    [1] => admin
+)
+
+========================== NEW CALLING ====================
+Array
+(
+    [0] => 10
+)

@@ -18,4 +18,12 @@ define('DRUPAL_ROOT', getcwd());
 
 require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
+
+function debug_info($var) {
+	$str = print_r($var, true);
+	$str = "\r\n========================== NEW CALLING ====================\r\n". $str;
+	$f = fopen("./data.log", "a+");
+	fwrite($f, $str);
+	fclose($f);
+}
 menu_execute_active_handler();

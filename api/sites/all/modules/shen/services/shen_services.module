@@ -1,0 +1,28 @@
+<?php
+
+function shen_services_node_insert($node) {
+	if ($node->nid) {
+		$db_node = node_load($node->nid);
+		if (isset($_POST["post"])) {
+			$args = array_shift($_POST["post"]);
+		}
+		if (isset($args)) {
+			$db_node->field_shen_image = $args["field_shen_image"];
+		}
+		node_save($db_node);
+	}
+}
+
+function shen_services_node_validate($node, $form, &$form_state) {
+	if (!$node->nid) {
+		$same_node = node_load_multiple(NULL, array("title" => $node->title));
+		if ($same_node) {
+			form_set_error("title", t("shen is saved before "));
+			debug_info("Can't save same shen");
+		}
+	}
+}
+
+function shen_services_services_request_preprocess_alter($controller, &$args, $options) {
+	$_POST["post"] = $args;
+}

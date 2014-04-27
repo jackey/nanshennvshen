@@ -10,7 +10,9 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+      $mShen = new Application_Model_Shen();
+      $shen_list = $mShen->getShenList();
+      $this->view->shenlist = $shen_list;
     }
 
 
