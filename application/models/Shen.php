@@ -4,6 +4,7 @@ class Application_Model_Shen
 {	
    const  SHEN_BOY = 1;
    const  SHEN_GIRL = 0;
+   const PAGE_SIZE = 10;
    
    /**
     *
@@ -17,11 +18,11 @@ class Application_Model_Shen
     $this->rpc_client->getHttpClient()->setCookieJar(TRUE);
   }
   
-  public function getShenList($gender = 0, $page = 1) {
+  public function getShenList($gender = 0, $page = 0) {
     $token = $this->getAccessToken();
     $login_res = $this->rpc_client->call("user.login", array(SHEN_API_USER, SHEN_API_PASS));
     
-    $shen_list = $this->rpc_client->call("nvshen.index");
+    $shen_list = $this->rpc_client->call("nvshen.index", array(array("offset" => $page * self::PAGE_SIZE)));
     return $shen_list;
 	}
   

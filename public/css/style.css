@@ -2,8 +2,6 @@ body, html {
   width: 760px;
   margin: 0 auto;
   background: url(../misc/bg.png) repeat-y;
-  height: 600px;
-  max-height: 600px;
 }
 
 img {
@@ -12,16 +10,15 @@ img {
 
 .header {
   position: fixed;
-top: 20px;
-width: 760px;
+  width: 760px;
+  z-index: 2;
 }
 
 .header .search input {
   height: 50px;
-width: 100%;
-border: 1px solid #a9a9a9;
-border-radius: 5px;
-
+  width: 100%;
+  border: 1px solid #a9a9a9;
+  border-radius: 5px;
 }
 
 .header .search {
@@ -95,14 +92,18 @@ font-size: 16px;
   right: 0px;
 }
 
-.body .items > li.item {
-width: 284px;
-font-size: 14px;
-padding: 5px;
-border: 1px solid #a0a0a0;
-margin-bottom: 10px;
+.body .items > div.item {
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid #a0a0a0;
+  margin-bottom: 10px;
 }
 
-.body .items  .item-event {
-  margin-left: 30px;
+.body .items.event {
+  margin-left: 45px;
+}
+
+.body .items {
+    float: left;
+    position: relative;
 }

@@ -49,6 +49,7 @@ class NanshennvshenStoreInToDatabasePipeLine(object):
 				}
 				field_shen_images.append(shen_image)
 		new_node["field_shen_image"] = {"und": field_shen_images}
+		print new_node
 		try:
 			res = server.node.create(new_node)
 		except Exception as e:

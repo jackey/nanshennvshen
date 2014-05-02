@@ -1,22 +1,26 @@
-<div class="bg">
-  <ul class="items clearfix js-masonry" id="shen-container" data-masonry-options='{ "itemSelector": ".item" }'>
-    <?php foreach ($this->shenlist as $index => $shen):?>
-        <li class="item item-<?php echo $index %2 == 0 ? "odd": "event"?>">
-      <div class="top">
-        <?php echo $shen["image"][0]?>
-      </div>
-      <div class="btm">
-        <div class="t1">
-          <span class="name"><?php echo $shen["title"]?></span>
-          <span class="star">
-            10万+ 喜欢
-          </span>
+<div class="bg clearfix">
+  <?php foreach ($this->chunks_shen_list as $chunk_index => $shen_list):?>
+    <div class="items <?php echo $chunk_index % 2 == 0 ? "odd": "event"?>" id="shen-container-<?php echo $chunk_index?>">
+      <?php foreach ($shen_list as $index => $shen):?>
+          <div class="item item-<?php echo $index %2 == 0 ? "odd": "event"?>">
+        <div class="top">
+         <?php echo $shen["image"][0]?>
         </div>
-        <div class="t2">
-          <p><?php echo $shen["desc"]?></p>
+        <div class="btm">
+          <div class="t1">
+            <span class="name"><?php echo $shen["title"]?></span>
+            <span class="star">
+              10万+ 喜欢
+            </span>
+          </div>
+          <div class="t2">
+            <p><?php echo $shen["desc"]?></p>
+          </div>
         </div>
       </div>
-    </li>
-    <?php endforeach;?>
-  </ul>
+      <?php endforeach;?>
+    </div>
+  <?php endforeach;?>
 </div>
+
+<div class="navigation"><a href="/frontapi/nextshen?next=2"></a></div>

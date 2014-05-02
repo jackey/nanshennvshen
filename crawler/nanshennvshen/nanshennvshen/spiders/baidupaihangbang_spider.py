@@ -10,11 +10,12 @@ class BaidupaihangbangSpider (Spider):
 	name = "baidupaihangbang"
 
 	urls = [{"url": "http://top.baidu.com/buzz?b=18", "gender": 1},
-		{"url": "http://top.baidu.com/buzz?b=16&c=9", "gender": 1},
-		{"url": "http://top.baidu.com/buzz?b=3&c=9", "gender": 1},
-		{"url": "http://top.baidu.com/buzz?b=17&c=9", "gender": 0},
-		{"url": "http://top.baidu.com/buzz?b=15&c=9", "gender": 0},
-		{"url": "http://top.baidu.com/buzz?b=22&c=9", "gender": 0}]
+		# {"url": "http://top.baidu.com/buzz?b=16&c=9", "gender": 1},
+		# {"url": "http://top.baidu.com/buzz?b=3&c=9", "gender": 1},
+		# {"url": "http://top.baidu.com/buzz?b=17&c=9", "gender": 0},
+		# {"url": "http://top.baidu.com/buzz?b=15&c=9", "gender": 0},
+		# {"url": "http://top.baidu.com/buzz?b=22&c=9", "gender": 0}
+		]
 
 	start_urls = []
 
@@ -28,23 +29,23 @@ class BaidupaihangbangSpider (Spider):
 			if u["url"] == url:
 				return u["gender"]
 
-
 	def parse(self, response):
 		sel = Selector(response)
 		gender = self.itemGender(response.url)
+		print "Fetched: " + response.url
 		items = []
 		listtable = sel.css("table.list-table tr:not(.item-tr)")
 		for index, list_item in enumerate(listtable):
 			name = "".join(list_item.css("td.keyword a.list-title::text").extract())
 			if name is not "":
 				baike = "".join(list_item.css("td.tc a::attr(href)")[0].extract())
-				
 				shen = NanshennvshenItem()
 				shen["name"] = name
 				shen["desc"] = get_desc_from_baike(baike)
+				shen["gender"] = gender
 				shen["image_urls"] = get_image_from_baidutu("http://image.baidu.com/i?tn=baiduimagenojs&ie=utf-8&word="+ urllib.quote(name.encode("utf-8")) +"&s=0")
-				items.append(shen)
-				shen["gender"] = 1
+				if shen["desc"]:
+					items.append(shen)
 
 		return items
 

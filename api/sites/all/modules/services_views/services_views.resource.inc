@@ -26,6 +26,7 @@
  *  Array. The views return.
  */
 function services_views_retrieve($view_name, $display_id = 'default', $args = array(), $offset = 0, $limit = -1, $return_type = FALSE, $filters = array()) {
+
   $result = array();
   $view = views_get_view($view_name);
 
@@ -112,9 +113,16 @@ function services_views_execute_view($view_info, $view = NULL, $display_id = NUL
     $display_id = $view_info['display_id'];
 
     $args = array();
+    if (is_array($view)) {
+      $args = $view;
+    }
 
     $view = views_get_view($view_name);
     $view->set_arguments($args);
+    
+    if (isset($args["offset"])) {
+      $view->set_offset($args["offset"]);
+    }
   }
 
   // Avoid translation of the field labels.
